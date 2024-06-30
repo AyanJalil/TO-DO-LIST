@@ -17,7 +17,9 @@ all.addEventListener('click', display);
 // add item
 function additem(e){
     e.preventDefault();
-
+    if(input.value === ''){
+        alert('alert please enter a value');
+    }else{
     // checkbox
     var check = document.createElement('input');
     check.type = 'checkbox';
@@ -47,6 +49,7 @@ function additem(e){
     li.appendChild(button);
 
     itemslist.appendChild(li);
+    }
     input.value = '';
     savdata();
 
